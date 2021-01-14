@@ -20,21 +20,21 @@ Electrics               =1400*1;
 W_Systems = Fuel_System + Avionics + Flight_Control_Systems + APU + Hydraulics + Electrics
 
 %Interior component weights
-Entertainment           =350 *1; % - Paul
-Single_Seat             =85  *6; % - Paul
-Divan_Seat              =200 *2; % 3 places - Paul
-Pullout_table           =20  *2; % - Paul
-Pullout_work_table      =35  *1; % larger - Paul
-Lavatory                =300 *2; % - Paul
-Microwave               =40  *1; % - Paul
-Oven                    =60  *1; % - Paul
-Espresso                =25  *1; % - Paul
-Chiller                 =45  *1; % - Paul
-Lighting                =120 *1; % - Paul
-Galley                  =65  *6; % lb/ft % - Paul 
-Wardrobe                =150 *2; % - Paul
+Entertainment           =350 *1; 
+Single_Seat             =85  *6; 
+Divan_Seat              =200 *2; % 3 places
+Pullout_table           =20  *2; 
+Pullout_work_table      =35  *1; % larger 
+Lavatory                =300 *2; 
+Microwave               =40  *1; 
+Oven                    =60  *1; 
+Espresso                =25  *1; 
+Chiller                 =45  *1; 
+Lighting                =120 *1; 
+Galley                  =65  *6; % lb/ft
+Wardrobe                =150 *2; 
 Furniture               =3.5 *(1260+1670)*0.5; %F900LX:1260; %G500:1670 % 3.5 to 5.5 lb/ft3 - Average
-Various_options         =500 *1; % - Paul
+Various_options         =500 *1; 
 
 W_Interiors = Entertainment+Single_Seat+Divan_Seat+Pullout_table+Pullout_work_table+Lavatory+Microwave+Oven+Espresso+Chiller+Lighting+Galley+Wardrobe+Furniture+Various_options 
 
