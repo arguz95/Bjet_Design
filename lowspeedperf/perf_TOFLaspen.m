@@ -1,6 +1,6 @@
 % Low speed calculation of thrust, LFL and TOFL
-% Created by: Paul, Pierre, Arnaud
-% Last Modified by: Paul, Pierre, Arnaud
+% Created by: Arnaud
+% Last Modified by: Arnaud
 % Date: 2020/april/8
 
 %we took the TOFL of aspen and hitlon to calculate the Thrust
@@ -76,77 +76,3 @@ TOP_Aspen=(MTOW^2)/(Clmax_10* (sf*thr*neng) *S*sigma^0.8);
 TOFL_Aspen = 150+28.43*TOP_Aspen+0.0185*TOP_Aspen^2;
 
 end
-
-%% Unused
-% %% Hilton
-% alt_ft=20; %ft
-% disa=15;
-% [ tisa_cel, theta, sigma, delta ] = atmos( alt_ft, disa );
-% 
-% MLW=MTOW-15000; %A MODIFER
-% %Vstall_20=sqrt((2*MTOW*g) /((ro_0)*sigma*S*Clmax_20));
-% %V2_20=1.2*Vstall_20;
-% 
-% Vflare_Hilton=sqrt((2*MLW*g*1.08) /((ro_0)*sigma*S*Clmax_landing));
-% 
-% R_Hilton=(Vflare_Hilton^2)/(g*0.08); %ft
-% %a_Hilton=(Vflare_Hilton^2)/R_Hilton;
-% Air_dist_Hilton=(50/tan(3*pi/180))+R_Hilton*sin(3/2*pi/180);
-% 
-% Vtd_Hilton=1.15*sqrt((2*MLW*g) /((ro_0)*sigma*S*Clmax_landing));
-% Sgl_Hilton=3*Vtd_Hilton;
-% Sv_Hilton=(Vtd_Hilton^2)/(1.2*g);
-% Ground_dist_Hilton=Sgl_Hilton+Sv_Hilton;
-% 
-% ALD_Hilton=Ground_dist_Hilton+Air_dist_Hilton;
-% LFL_Hilton=ALD_Hilton/0.6;
-% 
-% 
-% %Thrust determination for take off with given TOFL and Sref
-% Thrust_Hilton=7000;
-% TOP_Hilton=(MTOW^2)/(Clmax_20*Thrust_Hilton*n*S*sigma^0.8);
-% TOFL_Hilton=150+28.43*TOP_Hilton+0.0185*TOP_Hilton^2;
-% while TOFL_Hilton >= 4300;
-%     Thrust_Hilton=Thrust_Hilton+50;
-%     TOP_Hilton=(MTOW^2)/(Clmax_20*Thrust_Hilton*n*S*sigma^0.8);
-%     TOFL_Hilton=150+28.43*TOP_Hilton+0.0185*TOP_Hilton^2;
-% end;
-% Thrust_Hilton;
-% %%
-% %Sea level
-% 
-% alt_ft=0; %ft
-% disa=0;
-% [ tisa_cel, theta, sigma, delta ] = atmos( alt_ft, disa );
-% 
-% MLW=MTOW-15000; %A MODIFER
-% %Vstall_10=sqrt((2*MTOW*g) /((ro_0)*sigma*S*Clmax_10));
-% %V2_10=1.2*Vstall_10;
-% Vflare_SL=sqrt((2*MLW*g*1.08) /((ro_0)*sigma*S*Clmax_landing));
-% 
-% R_SL=(Vflare_SL^2)/(g*0.08); %ft
-% %a_SL=(Vflare_SL^2)/R_SL;
-% Air_dist_SL=(50/tan(3*pi/180))+R_SL*sin(3/2*pi/180);
-% 
-% Vtd_SL=1.15*sqrt((2*MLW*g) /((ro_0)*sigma*S*Clmax_landing));
-% Sgl_SL=3*Vtd_SL;
-% Sv_SL=(Vtd_SL^2)/(1.2*g);
-% Ground_dist_SL=Sgl_SL+Sv_SL;
-% 
-% ALD_SL=Ground_dist_SL+Air_dist_SL;
-% LFL_SL=ALD_SL/0.6;
-% 
-% %Thrust determination for take off with given TOFL and Sref
-% Thrust_SL=8000;
-% TOP_SL=(MTOW^2)/(Clmax_10*Thrust_SL*n*S*sigma^0.8);
-% TOFL_SL=150+28.43*TOP_SL+0.0185*TOP_SL^2;
-% while TOFL_SL >=8000;
-%     Thrust_SL=Thrust_SL+50;
-%     TOP_SL=(MTOW^2)/(Clmax_10*Thrust_SL*n*S*sigma^0.8);
-%     TOFL_SL=150+28.43*TOP_SL+0.0185*TOP_SL^2;
-% end;
-% Thrust_SL;
-% end
-
-
-
