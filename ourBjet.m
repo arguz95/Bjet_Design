@@ -3,7 +3,7 @@ classdef ourBjet
     % Class ourBjet
     % Definition: Controls all airplane data used in code
     % This is the hybrid model used for weight and performance calculation
-    %   hybrid between G500 and LX900
+    % hybrid between G500 and LX900
     % Date: 2020-02-15
     
     properties
@@ -26,7 +26,7 @@ classdef ourBjet
         % Geometry - Wing
         wing_b = 78.65;         % [ft] Wingspan - Hybrid
         wing_troot = 0.5;       % [ft] Wing Root Thickness in ft
-        wing_phi50 = 0.4267;    % Can be estimated from the plane_parameters.m - varie de 0 à 1 - This need TBC
+        wing_phi50 = 0.4267;    % Can be estimated from the plane_parameters.m - varie de 0 Ã  1 - This need TBC
         
         % Geometry - Tail
         tail_lh = 32.325;       % [ft] h-Tail Arm - 1/2 wing MAC to 1/2 h-Tail MAC
