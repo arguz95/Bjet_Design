@@ -1,5 +1,5 @@
 % Evolution of the Lift to Drag ratio
-% Created by: Paul, Florian, Arnauld
+% Created by: Arnaud
 % Last Modified by: Lucas
 % Date: 2020/april/7
 function [ LDratio_oei ] = aero_LDratio_oei(airplane, wgt, alt, mach, disa)
